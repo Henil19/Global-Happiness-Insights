@@ -1,0 +1,56 @@
+{
+  "rows_before_cleaning": 147,
+  "rows_after_cleaning": 147,
+  "rows_removed": 0,
+  "columns_before_cleaning": 11,
+  "columns_after_cleaning": 11,
+  "missing_before_cleaning": {
+    "Country name": 0,
+    "Ladder score": 0,
+    "upperwhisker": 0,
+    "lowerwhisker": 0,
+    "Explained by: Log GDP per capita": 0,
+    "Explained by: Social support": 0,
+    "Explained by: Healthy life expectancy": 1,
+    "Explained by: Freedom to make life choices": 1,
+    "Explained by: Generosity": 0,
+    "Explained by: Perceptions of corruption": 1,
+    "Dystopia + residual": 3
+  },
+  "missing_after_cleaning": {
+    "Country name": 0,
+    "Ladder score": 0,
+    "upperwhisker": 0,
+    "lowerwhisker": 0,
+    "Explained by: Log GDP per capita": 0,
+    "Explained by: Social support": 0,
+    "Explained by: Healthy life expectancy": 1,
+    "Explained by: Freedom to make life choices": 1,
+    "Explained by: Generosity": 0,
+    "Explained by: Perceptions of corruption": 1,
+    "Dystopia + residual": 3
+  },
+  "duplicate_country_rows": 0,
+  "cleaning_decisions": [
+    "Trim whitespace from column headers and country names.",
+    "Retain all source rows; no rows were removed.",
+    "Retain all source missing values; no imputation was performed.",
+    "Validate required fields, country uniqueness, numeric types, finite scores, and the 0\u201310 score range."
+  ],
+  "validation": "passed",
+  "source_file": "WHR_2025.xls",
+  "source_sheets": [
+    "Sheet1"
+  ],
+  "source_shape": [
+    147,
+    11
+  ],
+  "countries": 147,
+  "score_column": "Ladder score",
+  "score_min": 1.364,
+  "score_max": 7.736,
+  "python_version": "3.12.14",
+  "dataset_year_coverage": "2022\u20132024 (report ranking period; workbook has no year column)",
+  "interpretation": "Country-level ranking associations; no causal inference."
+}

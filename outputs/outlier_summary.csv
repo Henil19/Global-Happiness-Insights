@@ -1,0 +1,8 @@
+column,valid_n,q1,q3,iqr,lower_bound,upper_bound,outlier_count,outlier_countries
+Ladder score,147,4.7025,6.479,1.7765000000000004,2.037749999999999,9.14375,1,Afghanistan
+Explained by: Log GDP per capita,147,1.037,1.648,0.611,0.12049999999999994,2.5645,1,Venezuela
+Explained by: Social support,147,1.131,1.5935000000000001,0.46250000000000013,0.4372499999999998,2.2872500000000002,3,Benin; Bangladesh; Afghanistan
+Explained by: Healthy life expectancy,146,0.4145,0.7132499999999999,0.29874999999999996,-0.03362499999999996,1.1613749999999998,0,
+Explained by: Freedom to make life choices,146,0.655,0.88125,0.22624999999999995,0.3156250000000001,1.2206249999999998,5,Türkiye; Madagascar; Comoros; Lebanon; Afghanistan
+Explained by: Generosity,147,0.0665,0.1505,0.08399999999999999,-0.0595,0.27649999999999997,2,Indonesia; Myanmar
+Explained by: Perceptions of corruption,146,0.0665,0.1845,0.118,-0.11049999999999999,0.3615,11,Finland; Denmark; Sweden; Norway; Luxembourg; New Zealand; Switzerland; Ireland; Singapore; Estonia; Hong Kong SAR of China

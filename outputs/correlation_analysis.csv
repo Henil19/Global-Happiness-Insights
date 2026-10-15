@@ -1,0 +1,7 @@
+factor,column,pearson_r,pearson_p_value,pearson_n,spearman_rho,spearman_p_value,spearman_n,missing_factor,missing_score,missing_either,status
+GDP per capita,Explained by: Log GDP per capita,0.7632687445056481,2.6752280207817907e-29,147,0.810117484181097,1.9245382171733696e-35,147,0,0,0,ok
+Social support,Explained by: Social support,0.812122420491677,9.636164648994058e-36,147,0.8108625534837093,1.489712413758776e-35,147,0,0,0,ok
+Healthy life expectancy,Explained by: Healthy life expectancy,0.7118538585288463,7.387339987328039e-24,146,0.7248943911340227,4.466263257759845e-25,146,1,0,1,ok
+Freedom to make life choices,Explained by: Freedom to make life choices,0.6343999145795736,8.195648661907339e-18,146,0.6198595208594292,7.301508862321214e-17,146,1,0,1,ok
+Generosity,Explained by: Generosity,0.05435122681141476,0.5132203231182889,147,0.09865818618169535,0.23449545963307458,147,0,0,0,ok
+Perceptions of corruption,Explained by: Perceptions of corruption,0.4124571769983195,2.3025962008186245e-07,146,0.36954025717784245,4.4251658899568015e-06,146,1,0,1,ok

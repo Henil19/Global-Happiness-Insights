@@ -1,0 +1,11 @@
+Rank,Country name,Ladder score,upperwhisker,lowerwhisker,Explained by: Log GDP per capita,Explained by: Social support,Explained by: Healthy life expectancy,Explained by: Freedom to make life choices,Explained by: Generosity,Explained by: Perceptions of corruption,Dystopia + residual
+1,Finland,7.736,7.81,7.662,1.749,1.783,0.824,0.986,0.11,0.502,1.782
+2,Denmark,7.521,7.611,7.431,1.825,1.748,0.82,0.955,0.15,0.488,1.535
+3,Iceland,7.515,7.606,7.425,1.799,1.84,0.873,0.971,0.201,0.173,1.659
+4,Sweden,7.345,7.427,7.262,1.783,1.698,0.889,0.952,0.17,0.467,1.385
+5,Netherlands,7.306,7.372,7.24,1.822,1.667,0.844,0.86,0.186,0.344,1.583
+6,Costa Rica,7.274,7.361,7.187,1.492,1.6,0.68,0.948,0.067,0.118,2.369
+7,Norway,7.262,7.353,7.171,1.902,1.711,0.863,0.962,0.168,0.425,1.231
+8,Israel,7.234,7.301,7.168,1.695,1.743,0.824,0.74,0.144,0.193,1.895
+9,Luxembourg,7.122,7.213,7.031,2.028,1.558,0.864,0.931,0.117,0.397,1.227
+10,Mexico,6.979,7.068,6.889,1.435,1.504,0.55,0.879,0.057,0.118,2.438

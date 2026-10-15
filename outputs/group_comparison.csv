@@ -1,0 +1,7 @@
+factor,column,top10_mean,bottom10_mean,absolute_difference_top_minus_bottom,percentage_difference_vs_bottom10,top10_n,bottom10_n,status
+GDP per capita,Explained by: Log GDP per capita,1.7529999999999997,0.8207999999999999,0.9321999999999998,,10,10,ok
+Social support,Explained by: Social support,1.6852,0.8314999999999999,0.8537000000000001,,10,10,ok
+Healthy life expectancy,Explained by: Healthy life expectancy,0.8030999999999999,0.25549999999999995,0.5476,,10,10,ok
+Freedom to make life choices,Explained by: Freedom to make life choices,0.9183999999999999,0.4776999999999999,0.4407,,10,10,ok
+Generosity,Explained by: Generosity,0.13699999999999998,0.0881,0.048899999999999985,,10,10,ok
+Perceptions of corruption,Explained by: Perceptions of corruption,0.3225,0.0981,0.2244,,10,10,ok

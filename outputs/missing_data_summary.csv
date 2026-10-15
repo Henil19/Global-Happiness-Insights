@@ -1,0 +1,12 @@
+column,missing_count,row_count,missing_percent
+Country name,0,147,0.0
+Ladder score,0,147,0.0
+upperwhisker,0,147,0.0
+lowerwhisker,0,147,0.0
+Explained by: Log GDP per capita,0,147,0.0
+Explained by: Social support,0,147,0.0
+Explained by: Healthy life expectancy,1,147,0.6802721088435374
+Explained by: Freedom to make life choices,1,147,0.6802721088435374
+Explained by: Generosity,0,147,0.0
+Explained by: Perceptions of corruption,1,147,0.6802721088435374
+Dystopia + residual,3,147,2.0408163265306123
