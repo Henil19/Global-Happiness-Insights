@@ -1,0 +1,27 @@
+# Local dataset; obtain from the official WHR data page.
+/WHR_2025.xls
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Build outputs and temporary files
+build/
+dist/
+.presentation-build/
+.chart-data-*/
+.local-backups/
+*.log
+*.tmp
+*.bak
+presentation/*_revision*.pptx
+presentation/.staging/
+
+# Local credentials and OS files
+.streamlit/secrets.toml
+.DS_Store
+Thumbs.db
