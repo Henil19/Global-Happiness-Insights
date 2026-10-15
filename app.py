@@ -54,7 +54,7 @@ if page == "Overview":
     k4.metric("Score range", f"{high[SCORE]-low[SCORE]:.3f}", border=True)
     st.subheader("Country rankings")
     st.write("Use the ranking and relationship pages to search, sort, and explore the country scores.")
-    st.plotly_chart(comparison_figure(ranked), width="stretch", theme="streamlit", alt="Top and bottom ten explanatory component comparison")
+    st.plotly_chart(comparison_figure(ranked), width="stretch", theme="streamlit")
     st.info("Ladder score is the country happiness ranking measure. The ‘explained by’ variables are report decomposition components. Correlation describes association and does not establish causation.", title="How to read this dashboard")
 
 elif page == "Rankings":
@@ -66,32 +66,30 @@ elif page == "Rankings":
     st.caption(f"Showing {len(table)} countries. Click column headers to sort.")
     st.dataframe(table[["Rank", COUNTRY, SCORE]], hide_index=True, height=560,
                  column_config={"Rank": st.column_config.NumberColumn("Rank", format="%d"),
-                                SCORE: st.column_config.NumberColumn("Ladder score", format="%.3f")},
-                 alt="Interactive country rankings with rank and Ladder score")
+                                SCORE: st.column_config.NumberColumn("Ladder score", format="%.3f")})
 
 elif page == "Relationships":
     st.subheader("Happiness and explanatory components")
     st.caption("Each point is a country. Missing values are excluded separately for each plot. Pearson r summarizes linear association; it does not show causation.")
     chosen = st.selectbox("Indicator", list(FACTOR_COLUMNS.keys()))
-    st.plotly_chart(scatter_figure(filtered, chosen), width="stretch", alt=f"Ladder score versus {chosen} by country")
+    st.plotly_chart(scatter_figure(filtered, chosen), width="stretch")
     st.subheader("Correlation heatmap")
     method = st.segmented_control("Correlation method", ["pearson", "spearman"], default="pearson", format_func=str.title)
-    st.plotly_chart(correlation_figure(filtered, method or "pearson"), width="stretch",
-                    alt=f"Country correlation heatmap using {method or 'pearson'} correlations")
+    st.plotly_chart(correlation_figure(filtered, method or "pearson"), width="stretch")
     st.caption("Pearson measures linear association. Spearman measures monotonic rank association. Both use pairwise complete observations.")
     corr = correlate(filtered.drop(columns="Rank"))
     display_corr = corr[["factor", "pearson_r", "pearson_p_value", "pearson_n", "spearman_rho", "spearman_p_value", "spearman_n", "missing_either"]].copy()
     display_corr["pearson_p_value"] = display_corr["pearson_p_value"].map(format_p_value)
     display_corr["spearman_p_value"] = display_corr["spearman_p_value"].map(format_p_value)
     display_corr = display_corr.rename(columns={"pearson_p_value": "Pearson p-value", "spearman_p_value": "Spearman p-value"})
-    st.dataframe(display_corr, hide_index=True,
-                 alt="Pearson and Spearman correlation tests with formatted p-values and sample sizes")
+    st.caption("Pearson and Spearman coefficients, p-values, and effective sample sizes for each indicator.")
+    st.dataframe(display_corr, hide_index=True)
 
 elif page == "Top vs bottom":
     st.subheader("Top 10 and bottom 10 countries")
-    st.plotly_chart(comparison_figure(ranked), width="stretch", alt="Average explanatory component values for top and bottom ten countries")
+    st.plotly_chart(comparison_figure(ranked), width="stretch")
     groups = compare_groups(ranked)
-    st.dataframe(groups, hide_index=True, alt="Actual top ten and bottom ten indicator averages and differences")
+    st.dataframe(groups, hide_index=True)
     st.caption("Differences use top-10 mean minus bottom-10 mean. Percentage differences are omitted because these additive components do not have a meaningful ratio zero point.")
 
 elif page == "Country detail":
@@ -108,7 +106,7 @@ elif page == "Country detail":
         "Country value": st.column_config.NumberColumn(format="%.3f"),
         "Dataset average": st.column_config.NumberColumn(format="%.3f"),
         "Difference vs average": st.column_config.NumberColumn(format="%+.3f"),
-    }, alt=f"{selected} indicator values compared with dataset averages")
+    })
     st.caption("Averages are calculated from available values only. Missing country values remain blank.")
 
 elif page == "Data quality":
@@ -117,11 +115,9 @@ elif page == "Data quality":
              "The workbook has no year, region, or income-level fields. Report coverage is 2022–2024, not annual row-level observations.")
     st.markdown("No rows were removed and no values were imputed. Pairwise complete rows are used separately for each correlation. Group averages use available observations. Outliers are flagged for review using the 1.5×IQR rule and are not removed.")
     st.dataframe(missing_summary(ranked.drop(columns="Rank")), hide_index=True,
-                 column_config={"missing_percent": st.column_config.NumberColumn("Missing (%)", format="%.2f")},
-                 alt="Missing-value count and percentage for every source field")
+                 column_config={"missing_percent": st.column_config.NumberColumn("Missing (%)", format="%.2f")})
     st.subheader("Outlier summary")
-    st.dataframe(outlier_summary(ranked.drop(columns="Rank")), hide_index=True,
-                 alt="Tukey 1.5 times interquartile range outlier counts for score and available factors")
+    st.dataframe(outlier_summary(ranked.drop(columns="Rank")), hide_index=True)
     st.subheader("Cleaning decisions")
     for item in quality["cleaning_decisions"]:
         st.markdown(f"- {item}")
